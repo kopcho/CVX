@@ -1,1 +1,23 @@
-import Link from 'next/link'; export default function Hero(){return(<section style={{background:'#0f206c',color:'#fff',position:'relative',overflow:'hidden'}}><div className='container' style={{padding:'5rem 0',position:'relative'}}><img src='/brand/torus-11.svg' alt='' aria-hidden='true' style={{position:'absolute',right:'-4rem',top:'-3rem',width:'40rem',opacity:.2}}/><h1 style={{fontSize:'2.5rem',lineHeight:1.15}}>Convex: The Lattice for the Next Economy</h1><p style={{marginTop:'1rem',maxWidth:'42rem',opacity:.9}}>A decentralized platform built for real-time, global-scale applications. Fast, fair, and open.</p><div style={{marginTop:'2rem',display:'flex',gap:'.75rem',flexWrap:'wrap'}}><Link href='/about-convex' className='btn btn-primary'>Learn About Convex</Link><Link href='/buy' className='btn' style={{background:'#fff',color:'#0f206c'}}>Buy CVM</Link></div></div></section>)}
+import Image from "next/image";
+
+export default function Hero() {
+  return (
+    <section className="relative flex flex-col items-center justify-center text-center py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+      {/* Decorative Torus */}
+      <Image
+        src="/brand/torus-6.svg"
+        alt="Convex Torus"
+        width={600}
+        height={600}
+        className="absolute top-0 right-0 opacity-20 pointer-events-none"
+      />
+
+      <h1 className="text-5xl font-bold text-gray-900">
+        Convex: The Lattice for the AI Economy
+      </h1>
+      <p className="mt-6 text-xl text-gray-600 max-w-2xl">
+        Open, fair, and sustainable infrastructure for decentralized AI and finance.
+      </p>
+    </section>
+  );
+}
