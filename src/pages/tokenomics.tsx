@@ -31,7 +31,7 @@ export default function Tokenomics() {
         </p>
         <p className="mt-8">
           For full details see the{" "}
-          <a className="text-blue-300 underline" href="https://docs.convex.world" target="_blank" rel="noreferrer">
+          <a className="text-blue-300 underline" href="https://docs.convex.world/docs/cad/tokenomics" target="_blank" rel="noreferrer">
             Tokenomics section in Docs
           </a>
           .
