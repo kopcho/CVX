@@ -20,7 +20,7 @@ export default function Lattice() {
         </ul>
         <p className="mt-8">
           Want the full deep dive?{" "}
-          <a className="text-blue-300 underline" href="https://docs.convex.world" target="_blank" rel="noreferrer">
+          <a className="text-blue-300 underline" href="https://docs.convex.world/docs/overview/lattice" target="_blank" rel="noreferrer">
             Read the detailed Lattice docs
           </a>
           .
