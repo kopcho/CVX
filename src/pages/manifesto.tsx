@@ -19,7 +19,7 @@ export default function Manifesto() {
         </ul>
         <p className="mt-8">
           Read the full manifesto in{" "}
-          <a className="text-blue-300 underline" href="https://docs.convex.world" target="_blank" rel="noreferrer">
+          <a className="text-blue-300 underline" href="https://docs.convex.world/docs/overview/manifesto" target="_blank" rel="noreferrer">
             Docs
           </a>
           .
