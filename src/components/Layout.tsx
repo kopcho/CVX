@@ -1,2 +1,36 @@
-import Link from 'next/link';
-import Head from 'next/head'; export default function Layout({children}){return (<div><header style={{background:'#0f206c',color:'#fff'}}><div className='container' style={{padding:'1rem 0',display:'flex',justifyContent:'space-between'}}><Link href='/' className='font-heading text-xl'>Convex</Link><nav className='flex gap-4'><Link href='/about-convex'>About</Link><Link href='/about-cvm'>About CVM</Link><Link href='/use-cases'>Use Cases</Link><Link href='/developers'>Developers</Link><Link href='/buy'>Buy CVM</Link></nav></div></header><main>{children}</main></div>)}
+import Image from "next/image";
+import Link from "next/link";
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="min-h-screen flex flex-col bg-white text-gray-900">
+      {/* Header */}
+      <header className="p-4 flex items-center justify-between border-b border-gray-200">
+        <Link href="/">
+          <Image
+            src="/brand/logo-horizontal.svg"
+            alt="Convex Logo"
+            width={180}
+            height={40}
+            priority
+          />
+        </Link>
+        <nav className="space-x-6">
+          <Link href="/about">About</Link>
+          <Link href="/manifesto">Manifesto</Link>
+          <Link href="/tokenomics">Tokenomics</Link>
+          <Link href="/developers">Developers</Link>
+          <Link href="/buy-cvm">Buy CVM</Link>
+        </nav>
+      </header>
+
+      {/* Main */}
+      <main className="flex-1">{children}</main>
+
+      {/* Footer */}
+      <footer className="p-6 text-center text-sm border-t border-gray-200">
+        © {new Date().getFullYear()} Convex Foundation
+      </footer>
+    </div>
+  );
+}
