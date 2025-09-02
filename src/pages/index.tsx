@@ -1,1 +1,10 @@
-import Hero from '@/components/Hero'; import Layout from '@/components/Layout'; import Link from 'next/link'; export default function Home(){return(<Layout><Hero/><section className='container' style={{padding:'3rem 0'}}><h2>Why Convex?</h2><div className='grid' style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))',gap:'1rem',marginTop:'1rem'}}><div className='card'><img src='/brand/torus-6.svg' alt='' style={{height:'32px',opacity:.9}}/><h3>Real-time</h3><p>Millisecond consensus with CPoS.</p></div><div className='card'><img src='/brand/torus-9.svg' alt='' style={{height:'32px',opacity:.9}}/><h3>Global State</h3><p>One consistent state without shards.</p></div><div className='card'><img src='/brand/torus-4.svg' alt='' style={{height:'32px',opacity:.9}}/><h3>Fair Economics</h3><p>Transparent release curve. Community owned and open.</p></div></div></section></Layout>)}
+import Layout from "@/components/Layout";
+import Hero from "@/components/Hero";
+
+export default function HomePage() {
+  return (
+    <Layout>
+      <Hero />
+    </Layout>
+  );
+}
