@@ -1,1 +1,20 @@
-@tailwind base;@tailwind components;@tailwind utilities;body{font-family:system-ui,Arial,sans-serif;color:#1D1D1B}a{text-decoration:underline; color:#416ba9}.container{max-width:72rem;margin:0 auto;padding:0 1.5rem}.btn{padding:.75rem 1.25rem;border-radius:1rem} .btn-primary{background:#0f206c;color:#fff}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background-color: #231F56; /* Convex deep indigo */
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --cvx-indigo: #231F56;
+  --cvx-accent: #CAD22C; /* keep as CTA accent only */
+}
+
+/* Optional: subtle link underline on hover */
+a {
+  text-underline-offset: 3px;
+}
