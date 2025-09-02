@@ -1,0 +1,2 @@
+/** @type {import('tailwindcss').Config} */
+module.exports={content:["./src/**/*.{js,ts,jsx,tsx}"],theme:{extend:{colors:{cvx:{blue:{900:'#0f206c',600:'#416ba9',300:'#6aaae4',200:'#b8d8eb'},green:{500:'#93d500'},yellow:{500:'#e0cc00'},black:'#1D1D1B',white:'#ffffff'}}}},plugins:[]};

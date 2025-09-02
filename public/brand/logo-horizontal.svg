@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80">
+  <rect width="420" height="80" fill="none"/>
+  <g fill="#ffffff">
+    <circle cx="40" cy="40" r="24" fill="#6aaae4"/>
+    <circle cx="34" cy="36" r="10" fill="#0f206c"/>
+  </g>
+  <text x="80" y="53" font-family="Inter, Arial, sans-serif" font-size="36" fill="#ffffff">Convex</text>
+</svg>
