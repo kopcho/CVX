@@ -32,7 +32,7 @@ export default function Layout({ children, title }: LayoutProps) {
               <img
                 src="/brand/logo-284c-horizontal.svg"
                 alt="Convex"
-                className="h-6 w-auto"
+                className="h-8 md:h-12 w-auto"
               />
             </Link>
 
