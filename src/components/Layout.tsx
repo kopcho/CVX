@@ -1,53 +1,63 @@
+import Link from "next/link";
 import React from "react";
-import Head from "next/head";
+
+const nav = [
+  { href: "/about", label: "About" },
+  { href: "/lattice", label: "Lattice" },
+  { href: "/tokenomics", label: "Tokenomics" },
+  { href: "/use-cases", label: "Use Cases" },
+  { href: "/roadmap", label: "Roadmap" },
+  { href: "/contribute", label: "Contribute" },
+  { href: "/docs", label: "Docs", external: true, target: "_blank" }, // keep this less prominent in copy; ok in nav
+];
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="bg-[#231F56] text-white min-h-screen flex flex-col font-sans">
-      <Head>
-        <title>Convex – The Future of Decentralized Economics</title>
-        <meta
-          name="description"
-          content="Convex is a high-performance platform for building decentralized economic systems with fairness, speed, and scalability."
-        />
-      </Head>
-
-      {/* Top Navigation */}
-      <header className="w-full border-b border-white/10">
+    <div className="min-h-screen bg-[#231F56] text-white">
+      {/* Header */}
+      <header className="sticky top-0 z-50 backdrop-blur-md bg-[#0e0b2b]/60 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center gap-3">
             <img
-              src="/brand/logo-color-horizontal.svg"
-              alt="Convex Logo"
-              className="h-8 w-auto"
+              src="/brand/logo-284c-horizontal.svg"
+              alt="Convex"
+              className="h-6 w-auto"
             />
-          </a>
-          <nav className="hidden md:flex space-x-8 text-sm font-medium">
-            <a href="/about" className="hover:text-[#CAD22C] transition">About</a>
-            <a href="/lattice" className="hover:text-[#CAD22C] transition">Lattice</a>
-            <a href="/tokenomics" className="hover:text-[#CAD22C] transition">Tokenomics</a>
-            <a href="/roadmap" className="hover:text-[#CAD22C] transition">Roadmap</a>
-            <a href="/use-cases" className="hover:text-[#CAD22C] transition">Use Cases</a>
-            <a href="/contribute" className="hover:text-[#CAD22C] transition">Contribute</a>
-            <a href="https://docs.convex.world" target="_blank" rel="noreferrer" className="hover:text-[#CAD22C] transition">
-              Docs
-            </a>
+          </Link>
+
+          <nav className="hidden md:flex items-center gap-6">
+            {nav.map((item) =>
+              item.external ? (
+                <a
+                  key={item.href}
+                  href="https://docs.convex.world"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm text-white/80 hover:text-white transition-colors"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-sm text-white/80 hover:text-white transition-colors"
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
           </nav>
         </div>
       </header>
 
-      {/* Content */}
-      <main className="flex-grow">{children}</main>
+      {/* Page */}
+      <main>{children}</main>
 
       {/* Footer */}
-      <footer className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-8 text-sm text-white/70 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <span>© {new Date().getFullYear()} Convex Foundation. All rights reserved.</span>
-          <div className="flex space-x-6">
-            <a href="https://x.com/convex" target="_blank" rel="noreferrer" className="hover:text-[#CAD22C]">Twitter</a>
-            <a href="https://discord.gg/convex" target="_blank" rel="noreferrer" className="hover:text-[#CAD22C]">Discord</a>
-            <a href="https://github.com/convex-dev" target="_blank" rel="noreferrer" className="hover:text-[#CAD22C]">GitHub</a>
-          </div>
+      <footer className="mt-24 border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-6 py-10 text-sm text-white/60">
+          © {new Date().getFullYear()} Convex Foundation. Open-source, community-driven.
         </div>
       </footer>
     </div>
