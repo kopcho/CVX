@@ -22,12 +22,12 @@ export default function Hero() {
         <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight">
           Convex is{" "}
           <span className="bg-gradient-to-r from-white to-[#9AA5FF] bg-clip-text text-transparent">
-            Decentralization Evolved
+            Decentralisation Evolved
           </span>
         </h1>
 
         <p className="mt-8 max-w-3xl mx-auto text-lg sm:text-xl text-white/85 leading-relaxed">
-          A high-performance platform for decentralized applications—built for
+          A high-performance platform for decentralised applications—built for
           fairness, real-time interactions, and global-scale adoption.
           Lightning-fast consensus. Atomic transactions. True global state.
         </p>
